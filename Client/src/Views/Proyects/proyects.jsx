@@ -1,8 +1,6 @@
-import { Box, Typography, Button } from "@mui/material"
-import { useNavigate } from 'react-router-dom';
-import Icon from "../Icon/Icon";
 
-const Home = () => {
+
+const Proyects = () => {
   const navigate = useNavigate()
    return (
      <Box sx={{display: "flex", flexDirection: "column", alignItems: "center", bgcolor:"#D5CECE", color:"black", height:"500px", width:"400px", borderRadius:4, alignContent:"center"}}>
@@ -20,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Proyects;
