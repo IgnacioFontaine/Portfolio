@@ -1,14 +1,14 @@
-const Proyects = () => {
+const AuthorCard = () => {
    return (
      <div>
        <div>
-         <h1>Proyects</h1>
+         <h1>Author Card</h1>
        </div>
        <div>
-         <h2>List proyects</h2>
+         <h2>Parametros</h2>
        </div>
      </div>
   );
 };
 
-export default Proyects;
+export default AuthorCard;
