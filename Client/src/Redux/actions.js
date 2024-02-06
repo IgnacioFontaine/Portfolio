@@ -61,3 +61,13 @@ export const deleteProyect = (id) => {
     }
   };
 };
+
+
+export const getAllAuthors = () => async (dispatch) => {
+  try {
+    let result = await axios.get("http://localhost:3001/author");
+    return dispatch({ type: ACTION_TYPES.GET_ALL_AUTHORS, payload: result.data });
+  } catch (error) {
+    return dispatch({ type: ACTION_TYPES.ERROR, payload: error });
+  }
+};
