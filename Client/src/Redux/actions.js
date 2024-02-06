@@ -24,3 +24,22 @@ export const createProyect = (proyect) => async (dispatch) => {
   const newProyect = await axios.post("http://localhost:3001/product", proyect);
   return dispatch({ type: ACTION_TYPES.CREATE_PROYECT, payload: newProyect.data });
 };
+
+
+export const deleteProyect = (id) => {
+  return async (dispatch) => {
+    try {
+      await axios.delete(`http://localhost:3001/proyect/delete/${id}`);
+      
+      dispatch({
+        type: ACTION_TYPES.DELETE_PROYECT_SUCCESS,
+        payload: id
+      });
+    } catch (error) {
+      dispatch({
+        type: ACTION_TYPES.DELETE_PROYECT_FAILURE,
+        payload: error.message
+      });
+    }
+  };
+};
