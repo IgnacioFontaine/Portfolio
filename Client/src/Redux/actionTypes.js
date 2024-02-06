@@ -1,4 +1,5 @@
 const ACTION_TYPES = {
+  GET_ALL_PROYECTS:"GET_ALL_PROYECTS",
  
 }
     
