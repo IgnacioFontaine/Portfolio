@@ -2,6 +2,8 @@ import ACTION_TYPES from './actionTypes'
 
 //Config initialState
 const initialState = {
+  all_proyects: [],
+  name_proyect: [],
   
 };
 
