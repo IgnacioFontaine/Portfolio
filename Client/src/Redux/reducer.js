@@ -9,6 +9,12 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
 
+    case ACTION_TYPES.ERROR:
+      return {
+        ...state,
+        error: true,
+      };
+
     default:
       return {
         ...state,
