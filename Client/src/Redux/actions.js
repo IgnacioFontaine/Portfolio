@@ -19,3 +19,8 @@ export const getProyectName = (name) => async (dispatch) => {
     return dispatch({ type: ACTION_TYPES.ERROR, payload: error });
   }
 };
+
+export const createProyect = (proyect) => async (dispatch) => {
+  const newProyect = await axios.post("http://localhost:3001/product", proyect);
+  return dispatch({ type: ACTION_TYPES.CREATE_PROYECT, payload: newProyect.data });
+};
