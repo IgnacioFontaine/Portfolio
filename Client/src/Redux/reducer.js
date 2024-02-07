@@ -27,6 +27,9 @@ const reducer = (state = initialState, action) => {
             all_proyects: [...state.all_proyects]
       };
     
+    case ACTION_TYPES.MODIFY_PROYECT_FAILURE:
+      return state;
+    
     case ACTION_TYPES.GET_PROYECT_NAME:
       return {
         ...state,
