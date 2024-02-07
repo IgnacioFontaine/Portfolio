@@ -10,11 +10,17 @@ const initialState = {
 //Config reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_TYPES.GET_ALL_AUTHORS:
+    case ACTION_TYPES.GET_ALL_PROYECTS:
       return {
         ...state,
         all_proyects: action.payload,
       };
+    
+    case ACTION_TYPES.GET_PROYECT_NAME:
+      return {
+        ...state,
+        name_proyect: action.payload,
+      }
 
     case ACTION_TYPES.ERROR:
       return {
