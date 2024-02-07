@@ -16,6 +16,17 @@ const reducer = (state = initialState, action) => {
         all_proyects: action.payload,
       };
     
+    case ACTION_TYPES.MODIFY_PROYECT_SUCCESS:
+      state.all_proyects.forEach((proyect)=>{
+                if(proyect.id === action.payload.id){
+                    proyect.name = action.payload.name
+                }
+            })
+        return {
+            ...state,
+            all_proyects: [...state.all_proyects]
+      };
+    
     case ACTION_TYPES.GET_PROYECT_NAME:
       return {
         ...state,
