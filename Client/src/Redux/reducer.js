@@ -30,6 +30,19 @@ const reducer = (state = initialState, action) => {
     case ACTION_TYPES.MODIFY_PROYECT_FAILURE:
       return state;
     
+    case ACTION_TYPES.CREATE_PROYECT:
+      if (action.payload.status === 200) {
+        return {
+          ...state,
+          errormsg: {},
+        };
+      } else {
+        return {
+          ...state,
+          errormsg: action.payload,
+        };
+      }
+    
     case ACTION_TYPES.GET_PROYECT_NAME:
       return {
         ...state,
