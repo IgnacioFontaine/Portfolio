@@ -81,15 +81,15 @@ export const createAuthor = (author) => async (dispatch) => {
 export const deleteAuthor = (id) => {
   return async (dispatch) => {
     try {
-      await axios.delete(`http://localhost:3001/proyect/delete/${id}`);
+      await axios.delete(`http://localhost:3001/author/delete/${id}`);
       
       dispatch({
-        type: ACTION_TYPES.DELETE_PROYECT_SUCCESS,
+        type: ACTION_TYPES.DELETE_AUTHOR_SUCCESS,
         payload: id
       });
     } catch (error) {
       dispatch({
-        type: ACTION_TYPES.DELETE_PROYECT_FAILURE,
+        type: ACTION_TYPES.DELETE_AUTHOR_FAILURE,
         payload: error.message
       });
     }
