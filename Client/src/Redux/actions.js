@@ -76,3 +76,22 @@ export const createAuthor = (author) => async (dispatch) => {
   const newAuthor = await axios.post("http://localhost:3001/author/create", author);
   return dispatch({ type: ACTION_TYPES.CREATE_AUTHOR, payload: newAuthor.data });
 };
+
+
+export const deleteAuthor = (id) => {
+  return async (dispatch) => {
+    try {
+      await axios.delete(`http://localhost:3001/proyect/delete/${id}`);
+      
+      dispatch({
+        type: ACTION_TYPES.DELETE_PROYECT_SUCCESS,
+        payload: id
+      });
+    } catch (error) {
+      dispatch({
+        type: ACTION_TYPES.DELETE_PROYECT_FAILURE,
+        payload: error.message
+      });
+    }
+  };
+};
