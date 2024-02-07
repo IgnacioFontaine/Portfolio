@@ -21,7 +21,7 @@ export const getProyectName = (name) => async (dispatch) => {
 };
 
 export const createProyect = (proyect) => async (dispatch) => {
-  const newProyect = await axios.post("http://localhost:3001/product", proyect);
+  const newProyect = await axios.post("http://localhost:3001/proyect/create", proyect);
   return dispatch({ type: ACTION_TYPES.CREATE_PROYECT, payload: newProyect.data });
 };
 
