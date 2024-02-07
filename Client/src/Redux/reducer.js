@@ -48,6 +48,9 @@ const reducer = (state = initialState, action) => {
         ...state, all_proyects: state.all_proyects.filter(all_proyects=> all_proyects.id !== action.payload)
       };
     
+    case ACTION_TYPES.DELETE_PROYECT_FAILURE:
+      return state;
+    
     case ACTION_TYPES.GET_PROYECT_NAME:
       return {
         ...state,
