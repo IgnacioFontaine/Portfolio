@@ -76,23 +76,3 @@ export const createAuthor = (author) => async (dispatch) => {
   const newAuthor = await axios.post("http://localhost:3001/author/create", author);
   return dispatch({ type: ACTION_TYPES.CREATE_AUTHOR, payload: newAuthor.data });
 };
-
-
-export const modifyAuthor= (id, updatedFields) => {
-  return async (dispatch) => {
-    try {
-
-      await axios.put(`http://localhost:3001/author/modify/${id}`, updatedFields);
-
-      dispatch({
-        type: ACTION_TYPES.MODIFY_PROYECT_SUCCESS,
-        payload: updatedFields
-      });
-    } catch (error) {
-      dispatch({
-        type: ACTION_TYPES.MODIFY_PROYECT_FAILURE,
-        payload: error.message
-      });
-    }
-  };
-};
