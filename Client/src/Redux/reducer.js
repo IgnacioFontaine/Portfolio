@@ -42,6 +42,11 @@ const reducer = (state = initialState, action) => {
           errormsg: action.payload,
         };
       }
+
+    case ACTION_TYPES.DELETE_PROYECT_SUCCESS:
+      return {
+        ...state, all_proyects: state.all_proyects.filter(all_proyects=> all_proyects.id !== action.payload)
+      };
     
     case ACTION_TYPES.GET_PROYECT_NAME:
       return {
