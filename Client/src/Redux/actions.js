@@ -71,3 +71,8 @@ export const getAllAuthors = () => async (dispatch) => {
     return dispatch({ type: ACTION_TYPES.ERROR, payload: error });
   }
 };
+
+export const createAuthor = (author) => async (dispatch) => {
+  const newProyect = await axios.post("http://localhost:3001/product", author);
+  return dispatch({ type: ACTION_TYPES.CREATE_PROYECT, payload: newProyect.data });
+};
