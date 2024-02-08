@@ -64,6 +64,19 @@ const reducer = (state = initialState, action) => {
         ...state,
         all_authors: action.payload
       }
+    
+    case ACTION_TYPES.CREATE_AUTHOR:
+      if (action.payload.status === 200) {
+        return {
+          ...state,
+          errormsg: {},
+        };
+      } else {
+        return {
+          ...state,
+          errormsg: action.payload,
+        };
+      }
 
     case ACTION_TYPES.ERROR:
       return {
