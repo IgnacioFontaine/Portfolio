@@ -19,7 +19,8 @@ const reducer = (state = initialState, action) => {
     case ACTION_TYPES.MODIFY_PROYECT_SUCCESS:
       state.all_proyects.forEach((proyect)=>{
                 if(proyect.id === action.payload.id){
-                    proyect.name = action.payload.name
+                  proyect.name = action.payload.name,
+                  proyect.description = action.payload.description
                 }
             })
         return {
