@@ -78,7 +78,11 @@ const reducer = (state = initialState, action) => {
         };
       }
     
-    
+    case ACTION_TYPES.DELETE_AUTHOR_SUCCESS:
+      return {
+        ...state,
+        all_authors: state.all_authors.filter(all_authors => all_authors.id !== action.payload)
+      }
 
     case ACTION_TYPES.ERROR:
       return {
