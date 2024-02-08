@@ -47,7 +47,8 @@ const reducer = (state = initialState, action) => {
 
     case ACTION_TYPES.DELETE_PROYECT_SUCCESS:
       return {
-        ...state, all_proyects: state.all_proyects.filter(all_proyects=> all_proyects.id !== action.payload)
+        ...state,
+        all_proyects: state.all_proyects.filter(all_proyects => all_proyects.id !== action.payload)
       };
     
     case ACTION_TYPES.DELETE_PROYECT_FAILURE:
@@ -83,6 +84,9 @@ const reducer = (state = initialState, action) => {
         ...state,
         all_authors: state.all_authors.filter(all_authors => all_authors.id !== action.payload)
       }
+    
+    case ACTION_TYPES.DELETE_AUTHOR_FAILURE:
+      return state;
 
     case ACTION_TYPES.ERROR:
       return {
