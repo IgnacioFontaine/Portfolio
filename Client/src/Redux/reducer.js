@@ -77,6 +77,8 @@ const reducer = (state = initialState, action) => {
           errormsg: action.payload,
         };
       }
+    
+    
 
     case ACTION_TYPES.ERROR:
       return {
