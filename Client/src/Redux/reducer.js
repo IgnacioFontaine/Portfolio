@@ -4,6 +4,7 @@ import ACTION_TYPES from './actionTypes'
 const initialState = {
   all_proyects: [],
   name_proyect: [],
+  all_authors: []
   
 };
 
@@ -56,6 +57,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         name_proyect: action.payload,
+      }
+    
+    case ACTION_TYPES.GET_ALL_AUTHORS:
+      return {
+        ...state,
+        all_authors: action.payload
       }
 
     case ACTION_TYPES.ERROR:
