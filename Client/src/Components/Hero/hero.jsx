@@ -1,3 +1,5 @@
+import "./hero.css"
+
 const Hero = () => {
   return (
     <section className="hero align-items">
