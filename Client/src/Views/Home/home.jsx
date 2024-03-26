@@ -3,9 +3,8 @@ import NavBar from "../../Components/NavBar/navBar";
 const Home = () => {
   return (
     <div>
-      {/* NavBar */}
       <NavBar />
-      <div>
+      <div className="section-hero">
         <h1>Home page</h1>
       </div>
       <div>
